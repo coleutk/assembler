@@ -1,0 +1,14 @@
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/bin/Debug/net6.0/COSC365Assembler
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/bin/Debug/net6.0/COSC365Assembler.deps.json
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/bin/Debug/net6.0/COSC365Assembler.runtimeconfig.json
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/bin/Debug/net6.0/COSC365Assembler.dll
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/bin/Debug/net6.0/COSC365Assembler.pdb
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net6.0/COSC365Assembler.GeneratedMSBuildEditorConfig.editorconfig
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net6.0/COSC365Assembler.AssemblyInfoInputs.cache
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net6.0/COSC365Assembler.AssemblyInfo.cs
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net6.0/COSC365Assembler.csproj.CoreCompileInputs.cache
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net6.0/COSC365Assembler.dll
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net6.0/refint/COSC365Assembler.dll
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net6.0/COSC365Assembler.pdb
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net6.0/COSC365Assembler.genruntimeconfig.cache
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net6.0/ref/COSC365Assembler.dll

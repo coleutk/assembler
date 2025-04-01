@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "COSC365Assembler/1.0.0": {
+        "runtime": {
+          "COSC365Assembler.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "COSC365Assembler/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

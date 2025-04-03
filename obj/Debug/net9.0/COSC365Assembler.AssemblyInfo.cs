@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("COSC365Assembler")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e02598346baf02ef1991d6101a6a834b995da264")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d020ad7bf073b7cc998763b1c17348fc45687b70")]
 [assembly: System.Reflection.AssemblyProductAttribute("COSC365Assembler")]
 [assembly: System.Reflection.AssemblyTitleAttribute("COSC365Assembler")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

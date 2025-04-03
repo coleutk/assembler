@@ -1,7 +1,11 @@
-namespace COSC365Assembler
+using System;
+
+namespace VirtualMachineAssembler
 {
-    public interface IInstruction 
+    // Interface for all instruction implementations
+    public interface IInstruction
     {
+        // Method to encode an instruction into its 32-bit representation
         int Encode();
     }
 }

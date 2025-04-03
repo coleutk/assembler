@@ -12,3 +12,4 @@
 /Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net9.0/COSC365Assembler.pdb
 /Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net9.0/COSC365Assembler.genruntimeconfig.cache
 /Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net9.0/ref/COSC365Assembler.dll
+/Users/coleprice/Documents/all/CS365/assembly_lab/vmas/obj/Debug/net9.0/COSC365Assembler.sourcelink.json

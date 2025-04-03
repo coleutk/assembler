@@ -9,7 +9,7 @@ namespace VirtualMachineAssembler
 
         public Exit(int code)
         {
-            _code = code & 0x1F; // 5 bits for code
+            _code = code & 0xFF; // 5 bits for code
         }
 
         public int Encode()
@@ -142,7 +142,7 @@ namespace VirtualMachineAssembler
 
         public int Encode()
         {
-            return (4 << 28) | ((_offset & 0x3FFFFFF) << 2);
+            return (4 << 28) | (_offset & 0x0FFFFFFC);
         }
     }
 
@@ -158,7 +158,7 @@ namespace VirtualMachineAssembler
 
         public int Encode()
         {
-            return (5 << 28) | ((_offset & 0x3FFFFFF) << 2);
+            return (5 << 28) | (_offset & 0x0FFFFFFF);
         }
     }
 
@@ -174,7 +174,7 @@ namespace VirtualMachineAssembler
 
         public int Encode()
         {
-            return (6 << 28) | ((_offset & 0x3FFFFFF) << 2);
+            return (6 << 28) | (_offset & 0x0FFFFFFF);
         }
     }
 
@@ -190,49 +190,49 @@ namespace VirtualMachineAssembler
 
         public int Encode()
         {
-            return (0b0111 << 28) | (_offset & 0x0fffffff);
+            return (0b0111 << 28) | (_offset & 0x0FFFFFFF);
             // return (7 << 28) | ((_offset & 0x3FFFFFF) << 2);
         }
     }
 
-    // Binary If Instructions (opcode=8)
-    public class BinaryIf : IInstruction
+// Binary If Instructions (opcode=8)
+public class BinaryIf : IInstruction
+{
+    private readonly int _condition;
+    private readonly int _offset;
+
+    public BinaryIf(int condition, int offset)
     {
-        private readonly int _condition;
-        private readonly int _offset;
-
-        public BinaryIf(int condition, int offset)
-        {
-            _condition = condition & 0x7;
-            _offset = offset;
-        }
-
-        public int Encode()
-        {
-            return (8 << 28) | (_condition << 25) | ((_offset & 0x1FFFFF) << 2);
-        }
+        _condition = condition & 0x7;
+        _offset = offset;
     }
 
-    // Unary If Instructions (opcode=9)
-    public class UnaryIf : IInstruction
+    public int Encode()
     {
-        private readonly int encodedOffset;
-
-        public UnaryIf(int condCode, int? offset)
-        {
-            // No shifting, just mask to 24 bits
-            encodedOffset = (offset ?? 0) & 0xFFFFFF;
-
-            // Insert condCode (2 bits) into bits 26–25
-            encodedOffset |= (condCode & 0b11) << 25;
-        }
-
-        public int Encode()
-        {
-            // Set opcode (0b1001 = 9) in bits 31–28
-            return (0b1001 << 28) | encodedOffset;
-        }
+        // Ensure bits 1-0 are cleared in the offset (PC-relative offset must be multiple of 4)
+        return (8 << 28) | (_condition << 25) | (_offset & 0x01FFFFFC);
     }
+}
+
+// Unary If Instructions (opcode=9)
+public class UnaryIf : IInstruction
+{
+    private readonly int _condition;
+    private readonly int _offset;
+
+    public UnaryIf(int condition, int offset)
+    {
+        _condition = condition & 0x3;
+        _offset = offset;
+    }
+
+    public int Encode()
+    {
+        // Condition is 2 bits at positions 25-26, with bit 27 being 0
+        // Ensure bits 1-0 are cleared in the offset (PC-relative offset must be multiple of 4)
+        return (9 << 28) | (_condition << 25) | (_offset & 0x01FFFFFC);
+    }
+}
 
 
     // Dup Instructions (opcode=12)
@@ -247,7 +247,7 @@ namespace VirtualMachineAssembler
 
         public int Encode()
         {
-            return (12 << 28) | ((_offset & 0x3FFFFFF) << 2);
+            return (12 << 28) | (_offset & 0x0FFFFFFF);
         }
     }
 

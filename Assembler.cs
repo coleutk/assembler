@@ -290,6 +290,10 @@ namespace VirtualMachineAssembler
                         case "stprint":
                             {
                                 int offset = parts.Length > 1 ? ParseInt(parts[1]) : 0;
+                                
+                                // Console.WriteLine($"DEBUG: stprint instruction with offset: {offset} (0x{offset:X})");
+    
+
                                 _instructions.Add(new StPrint(offset));
                                 currentPC += 4;
                                 break;
